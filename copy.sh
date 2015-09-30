@@ -54,7 +54,7 @@ if [ "$auth" != "" ]; then
 fi
 
 curl "$url/_design/scratch" \
-  "${auth[@]}" \
+  ${auth[@]} \
   -k \
   -X COPY \
   -H destination:'_design/app'$rev
@@ -72,7 +72,7 @@ if [ "$auth" != "" ]; then
 fi
 
 curl "$url/_design/scratch" \
-  "${auth[@]}" \
+  ${auth[@]} \
   -k \
   -X COPY \
   -H destination:'_design/_auth'$rev
